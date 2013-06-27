@@ -8,7 +8,9 @@ Building
 ========
 
 git clone https://github.com/ECF/ZooServer.git
+
 cd ZooServer/org.eclipse.ecf.zooserver.parent
+
 mvn clean install
 
 Starting
