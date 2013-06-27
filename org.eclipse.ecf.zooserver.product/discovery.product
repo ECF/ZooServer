@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Gravity Discovery Server" uid="com.remainsoftware.gravity.server.discovery.product" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="ECF ZooServer" uid="org.eclipse.ecf.zooserver.product" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -24,7 +24,7 @@
 
    <windowImages/>
 
-   <launcher name="gravitydiscovery">
+   <launcher name="zooserver">
       <solaris/>
       <win useIco="false">
          <bmp/>
