@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Gravity Discovery Server" uid="com.remainsoftware.gravity.server.discovery.product" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-consolelog
+-console
+-initialize
+-noExit</programArgs>
+      <vmArgs>-Dzoodiscovery.flavor=zoodiscovery.flavor.centralized=localhost
+-Dzoodiscovery.clientPort=2181 
+-Dzoodiscovery.consoleLog 
+-Dzoodiscovery.autoStart
+-Dgravity.log.print.level=info
+-Dgravity.log4j.print.level=info
+-Dgravity.log.osgi.framework=false
+-Dosgi.console.enable.builtin=true</vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <launcher name="gravitydiscovery">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.eclipse.equinox.executable"/>
+      <feature id="org.eclipse.equinox.server.core"/>
+      <feature id="org.eclipse.ecf.zooserver.feature"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.ecf.provider.zookeeper" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator.manipulator" autoStart="true" startLevel="0" />
+   </configurations>
+
+</product>

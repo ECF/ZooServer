@@ -1,0 +1,185 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>zooserver-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<properties>
+		<tycho-version>0.18.0</tycho-version>
+	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>tycho-snapshots</id>
+			<url>https://oss.sonatype.org/content/groups/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<repositories>
+
+		<repository>
+			<id>ecf-latest</id>
+			<url>http://download.ecf-project.org/repo/C-HEAD-sdk.feature/lastSuccessful/archive/site.p2/</url>
+			<layout>p2</layout>
+		</repository>
+
+		<repository>
+			<id>eclipse-link</id>
+			<url>http://download.eclipse.org/rt/eclipselink/updates/</url>
+			<layout>p2</layout>
+		</repository>
+
+		<repository>
+			<id>indigo</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/kepler</url>
+		</repository>
+
+
+		<repository>
+			<id>nebula-release</id>
+			<url>http://download.eclipse.org/technology/nebula/snapshot</url>
+			<layout>p2</layout>
+		</repository>
+
+		<!-- <repository> <id>rap</id> <layout>p2</layout> <url>http://download.eclipse.org/rt/rap/2.1</url> 
+			</repository> -->
+		<repository>
+			<id>nebula-incubator</id>
+			<url>http://download.eclipse.org/technology/nebula/incubation/snapshot</url>
+			<layout>p2</layout>
+		</repository>
+
+		<repository>
+			<id>ds-annotations</id>
+			<url>http://www.wuetherich.com/ds-annotations/update</url>
+			<layout>p2</layout>
+		</repository>
+
+		<repository>
+			<id>industrial-connector</id>
+			<url>http://svn.codespot.com/a/eclipselabs.org/industrial-mylyn/trunk/com.industrialtsi.mylyn.site</url>
+			<layout>p2</layout>
+		</repository>
+
+		<repository>
+			<id>mylyn-38</id>
+			<url>http://download.eclipse.org/mylyn/releases/latest</url>
+			<layout>p2</layout>
+		</repository>
+
+		<!-- <repository> <id>orbit</id> <url>http://download.eclipse.org/tools/orbit/downloads/drops/R20130517111416/repository/</url> 
+			<layout>p2</layout> </repository> -->
+
+	</repositories>
+
+
+	<build>
+		<!-- <sourceDirectory>src</sourceDirectory> <directory>bin/target</directory> 
+			<outputDirectory>bin/target</outputDirectory> -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-packaging-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<!-- <format>'v'yyyyMMdd-HHmm</format> -->
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+						</archive>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<!-- <allowConflictingDependencies>true</allowConflictingDependencies> -->
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+
+						<!-- <environment> -->
+						<!-- <os>linux</os> -->
+						<!-- <ws>gtk</ws> -->
+						<!-- <arch>x86_64</arch> -->
+						<!-- </environment> -->
+						<!-- <environment> -->
+						<!-- <os>win32</os> -->
+						<!-- <ws>win32</ws> -->
+						<!-- <arch>x86</arch> -->
+						<!-- </environment> -->
+
+					</environments>
+					<filters>
+						<!-- example 1: restrict version of a bundle, alternative: <version> for selecting exactly one versions
+						<filter>
+							<type>eclipse-plugin</type>
+							<id>org.eclipse.osgi</id>
+							<restrictTo>
+								<versionRange>[3.6,3.7)</versionRange> 
+							</restrictTo>
+						</filter>
+                        -->
+						<!-- remove all providers of the package javax.persistence except the bundle javax.persistence 
+						<filter>
+							<type>java-package</type>
+							<id>javax.persistence</id>
+							<restrictTo>
+								<type>eclipse-plugin</type>
+								<id>javax.persistence</id>
+							</restrictTo>
+						</filter>
+                        -->
+						<!-- work around Equinox bug 348045, indigo, early releases juno
+						<filter>
+							<type>p2-installable-unit</type>
+							<id>org.eclipse.equinox.servletbridge.extensionbundle</id>
+							<removeAll />
+						</filter>
+						 -->
+					</filters>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<groupId>zooserver</groupId>
+	<modules>
+		<module>../org.eclipse.ecf.zooserver.feature</module>
+		<module>../org.eclipse.ecf.zooserver.product</module>
+	</modules>
+</project>
