@@ -21,30 +21,7 @@
 
 	<build>
 		<plugins>
-              <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>target-platform-configuration</artifactId>
-                <version>${tycho-version}</version>
-                <configuration>
-                    <environments>
-                        <environment>
-                            <os>linux</os>
-                            <ws>gtk</ws>
-                            <arch>x86</arch>
-                        </environment>
-                        <environment>
-                            <os>linux</os>
-                            <ws>gtk</ws>
-                            <arch>x86_64</arch>
-                        </environment>
-                        <environment>
-                            <os>win32</os>
-                            <ws>win32</ws>
-                            <arch>x86_64</arch>
-                        </environment>
-                    </environments>
-                </configuration>
-            </plugin>
+
             
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
@@ -68,7 +45,7 @@
                     <products>
                         <product>
 	                       <!-- id = UID to be located in ws\target\products\?.?.?.product directory and the required ?.product file will contain an uid=.. -->
-                            <id>com.remainsoftware.gravity.server.discovery.product</id>
+                            <id>org.eclipse.ecf.zooserver.product</id>
                             <archiveFileName>${product.shortname}</archiveFileName>
                         </product>
                     </products>
