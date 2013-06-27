@@ -26,3 +26,7 @@ Logging
 =======
 
 If you get log4j errors then you are probably not running from the root of the server. Please update the zooserver.ini file to point the log4j.properties file to a absolute location.
+
+e.g: 
+
+-Dlog4j.configuration=file:/c:/my/folder/log4j.properties
