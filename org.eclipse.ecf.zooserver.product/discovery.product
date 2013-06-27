@@ -15,10 +15,8 @@
 -Dzoodiscovery.clientPort=2181 
 -Dzoodiscovery.consoleLog 
 -Dzoodiscovery.autoStart
--Dgravity.log.print.level=info
--Dgravity.log4j.print.level=info
--Dgravity.log.osgi.framework=false
--Dosgi.console.enable.builtin=true</vmArgs>
+-Dosgi.console.enable.builtin=true
+-Dlog4j.debug=true</vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
