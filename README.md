@@ -25,4 +25,4 @@ The server is now ready to receive OSGi remote service publications and publish 
 Logging
 =======
 
-If you get log4j errors then you are probably not running from the root of the server. Please update the zooserver.ini file to point to a absolute location.
+If you get log4j errors then you are probably not running from the root of the server. Please update the zooserver.ini file to point the log4j.properties file to a absolute location.
