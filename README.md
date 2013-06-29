@@ -3,6 +3,12 @@ ZooServer
 
 ECF Discovery Server based on Zookeeper
 
+Binaries
+========
+
+Prebuild binaries can be picked up from [zoobin].
+
+[zoobin]: http://download.ecf-project.org/repo/C-HEAD-discovery.zooserver/builds/lastSuccessfulBuild/archive/org.eclipse.ecf.zooserver.product/target/products/ "zooserver build"
 
 Building
 ========
