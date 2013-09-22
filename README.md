@@ -15,7 +15,7 @@ Building
 
 git clone https://github.com/ECF/ZooServer.git
 
-cd ZooServer/org.eclipse.ecf.zooserver.parent
+cd ZooServer
 
 mvn clean install
 
