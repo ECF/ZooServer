@@ -1,7 +1,7 @@
 ZooServer
 =========
 
-ECF Discovery Server based on Zookeeper. It serves a similar purpose to the 'zookeeperd' package on Debian based Linux systems ('apt-get install zookeeperd').
+ECF Discovery Server based on Zookeeper. It serves a similar purpose to the ['zookeeperd' package](http://packages.debian.org/wheezy/zookeeperd) on Debian based Linux systems ('apt-get install zookeeperd').
 
 Binaries
 ========
@@ -10,7 +10,7 @@ Prebuild binaries can be picked up from [our zooserver download site] [zoobin]. 
 
 [zoobin]: http://download.ecf-project.org/repo/C-HEAD-discovery.zooserver/builds/lastSuccessfulBuild/archive/org.eclipse.ecf.zooserver.product/target/products/ "zooserver build"
 
-Building
+Buildign
 ========
 
 git clone https://github.com/ECF/ZooServer.git
