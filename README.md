@@ -1,7 +1,7 @@
 ZooServer
 =========
 
-ECF Discovery Server based on Zookeeper
+ECF Discovery Server based on Zookeeper. It serves a similar purpose to the 'zookeeperd' package on Debian based Linux systems ('apt-get install zookeeperd').
 
 Binaries
 ========
