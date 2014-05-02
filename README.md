@@ -10,7 +10,7 @@ Prebuild binaries can be picked up from [our zooserver download site] [zoobin]. 
 
 [zoobin]: http://download.ecf-project.org/repo/C-HEAD-discovery.zooserver/builds/lastSuccessfulBuild/archive/org.eclipse.ecf.zooserver.product/target/products/ "zooserver build"
 
-Buildign
+Building
 ========
 
 git clone https://github.com/ECF/ZooServer.git
